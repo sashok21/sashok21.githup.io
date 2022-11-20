@@ -1,0 +1,74 @@
+n = int(input("Введи номер у журналі:"))
+if n % 2 == 0:
+     a = "*"
+else:
+     a = "#"
+lastName = input("Введи прізвище англійською: ")
+lastName = lastName.upper()
+print("Твоє прізвище - ", lastName)
+for i in lastName:
+    if i == "S":
+        print(" " + a * 4)
+        print(a + "\n" + a)
+        print(" " + a * 3)
+        print("    " + a + "\n" + "    " + a)
+        print(" " + a * 3)
+        print()
+
+    elif i == "H":
+        j = 0
+        while j < 6:
+            if j == 3:
+                print(a * 5)
+            print(a + "   " + a)
+            j += 1
+        print()
+
+    elif i == "K":
+        print(a + "   " + a)
+        print(a + "  " + a)
+        print(a + " " + a)
+        print(a + "" + a)
+        print(a + " " + a)
+        print(a + "  " + a)
+        print(a + "   " + a)
+        print()
+
+    elif i == "V":
+        j = 1
+        while j < 6:
+            print(a + "   " + a)
+            j += 1
+        print(" " + a + " " + a)
+        print("  " + a)
+
+    elif i == "A":
+        print(" " + a * 3)
+        j = 1
+        while j < 6:
+            if j == 3:
+                print(a * 5)
+            print(a + "   " + a)
+            j += 1
+
+    elif i == "R":
+        r1 = a * 4
+        r2 = a + " " * 3 + a
+        j = 1
+        while j < 8:
+            if j in (1, 4):
+                print(r1)
+            elif j in (2, 3):
+                print(r2)
+            j += 1
+        print(a + " " + a)
+        print(a + "  " + a)
+        print(r2)
+
+    elif i == "L":
+        j = 1
+        while j < 7:
+            print(a)
+            j += 1
+        print(a*5)
+
